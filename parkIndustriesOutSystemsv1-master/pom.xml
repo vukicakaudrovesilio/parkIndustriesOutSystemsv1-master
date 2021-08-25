@@ -1,0 +1,162 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>parkIndustriesOutSystemsv1-master</groupId>
+  <artifactId>parkIndustriesOutSystemsv1-master</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+      <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+
+		<dependency>
+			<groupId>com.github.javafaker</groupId>
+			<artifactId>javafaker</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+	<dependency>
+	    <groupId>org.seleniumhq.selenium</groupId>
+	    <artifactId>selenium-java</artifactId>
+	    <version>3.141.59</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+	<dependency>
+	    <groupId>org.testng</groupId>
+	    <artifactId>testng</artifactId>
+	    <version>7.1.0</version>
+	    <scope>test</scope>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+	<dependency>
+	    <groupId>org.apache.poi</groupId>
+	    <artifactId>poi</artifactId>
+	    <version>4.1.2</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+	<dependency>
+	    <groupId>org.apache.poi</groupId>
+	    <artifactId>poi-ooxml</artifactId>
+	    <version>4.1.2</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>com.aventstack</groupId>
+	    <artifactId>extentreports</artifactId>
+	    <version>3.1.2</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-lang3</artifactId>
+	    <version>3.0</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>commons-io</groupId>
+	    <artifactId>commons-io</artifactId>
+	    <version>1.3.2</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+	<dependency>
+	    <groupId>log4j</groupId>
+	    <artifactId>log4j</artifactId>
+	    <version>1.2.17</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-safari-driver -->
+	<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-safari-driver</artifactId>
+    <version>3.141.59</version>
+	</dependency>
+	
+	    
+  </dependencies>
+  
+  <build>
+	<plugins>
+  		<plugin>
+
+			<artifactId>maven-assembly-plugin</artifactId>
+			<version>3.3.0</version>
+			<configuration>
+				<descriptors>
+					<descriptor>src/main/java/assembly/assembly.xml</descriptor>
+				</descriptors>
+			</configuration>
+			<executions>
+				<execution>
+					<id>make-assembly</id>
+					<phase>package</phase>
+					<goals>
+						<goal>single</goal>
+					</goals>
+					<configuration>
+						<archive>
+							<manifest>
+								<mainClass>Main.main</mainClass>
+							</manifest>
+						</archive>
+					</configuration>
+				</execution>
+			</executions>
+		</plugin>
+
+		<plugin>
+			<groupId>com.akathist.maven.plugins.launch4j</groupId>
+			<artifactId>launch4j-maven-plugin</artifactId>
+			<version>2.1.1</version>
+			<executions>
+				<execution>
+					<id>l4j-clui</id>
+					<phase>package</phase>
+					<goals>
+						<goal>launch4j</goal>
+					</goals>
+					<configuration>
+						<headerType>console</headerType>
+						<jar>target/parkIndustriesOutSystemsv1-0.0.1-SNAPSHOT-fat-tests.jar</jar>
+						<outfile>target/ParkIndustriesOutSystems-QA-Tests.exe</outfile>
+						<downloadUrl>http://java.com/download</downloadUrl>
+						<stayAlive>true</stayAlive>
+						<icon>target/test-classes/Icon/icons8-ab-testing-48.ico</icon>
+						<jre>
+							<bundledJre64Bit>false</bundledJre64Bit>
+							<bundledJreAsFallback>false</bundledJreAsFallback>
+							<minVersion>1.8.0</minVersion>
+							<jdkPreference>preferJre</jdkPreference>
+							<runtimeBits>64/32</runtimeBits>
+						</jre>
+						<versionInfo>
+							<fileVersion>1.0.0.0</fileVersion>
+							<txtFileVersion>${project.version}</txtFileVersion>
+							<fileDescription>${project.name}</fileDescription>
+							<copyright>ParkIndustriesOutSystems</copyright>
+							<productVersion>1.0.0.0</productVersion>
+							<txtProductVersion>1.0.0.0</txtProductVersion>
+							<productName>${project.name}</productName>
+							<companyName>ParkIndustriesOutSystems</companyName>
+							<internalName>SeleniumTests</internalName>
+							<originalFilename>ParkIndustriesOutSystems-QA-Tests.exe</originalFilename>
+							<language>ENGLISH_US</language>
+						</versionInfo>
+					</configuration>
+				</execution>
+			</executions>
+		</plugin>
+  	</plugins>
+	</build>
+</project>
