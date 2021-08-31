@@ -89,7 +89,7 @@
   <build>
 	<plugins>
   		<plugin>
-
+				<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-assembly-plugin</artifactId>
 			<version>3.3.0</version>
 			<configuration>
@@ -128,7 +128,7 @@
 					</goals>
 					<configuration>
 						<headerType>console</headerType>
-						<jar>target/parkIndustriesOutSystemsv1-0.0.1-SNAPSHOT-fat-tests.jar</jar>
+						<jar>target/parkIndustriesOutSystemsv1-master-0.0.1-SNAPSHOT-fat-tests.jar</jar>
 						<outfile>target/ParkIndustriesOutSystems-QA-Tests.exe</outfile>
 						<downloadUrl>http://java.com/download</downloadUrl>
 						<stayAlive>true</stayAlive>
@@ -157,6 +157,16 @@
 				</execution>
 			</executions>
 		</plugin>
-  	</plugins>
+<!--		<plugin>-->
+<!--			<groupId>org.apache.maven.plugins</groupId>-->
+<!--			<artifactId>maven-compiler-plugin</artifactId>-->
+<!--			<version>3.8.1</version>-->
+<!--			<configuration>-->
+<!--				<source>16</source>-->
+<!--				<target>16</target>-->
+<!--			</configuration>-->
+<!--		</plugin>-->
+
+	</plugins>
 	</build>
 </project>

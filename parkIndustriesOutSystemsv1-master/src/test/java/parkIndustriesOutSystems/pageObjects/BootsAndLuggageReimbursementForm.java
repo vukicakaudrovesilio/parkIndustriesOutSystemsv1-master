@@ -182,7 +182,7 @@ public class BootsAndLuggageReimbursementForm {
 	WebElement headerBLRFormPolicy;
 	
 	//Boots & Luggage Reimbursement Policy 
-	@FindBy(xpath="//div[@data-block='MainFlow.BootsLuggageReimbursementPolicy'][contains(.,'Park Industries provides safety Personal Protective Equipment (PPE) to all associates as required by OSHA 1910 requirements. Shop associates, installers and field service associates must wear ANSI approved (OSHA Z41 or Z41.1 approved) steel-toe footwear. Calendar Year Reimbursement AllowedBoots:•   $400.00 annually: Large Machine, Plasma/Flame, Paint, Blast, Maintenance, Installation and Field Service•   $200.00 annually: All other departments ***Park does not reimburse for orthotics.Luggage: •   $200.00 annually for Installers and Field Service only')]")
+	@FindBy(xpath="//div[@data-block='MainFlow.BootsLuggageReimbursementPolicy'][contains(.,'Park Industries provides safety Personal Protective Equipment (PPE) to all associates as required by OSHA 1910 requirements. Shop associates, installers and field service associates must wear ANSI approved (OSHA Z41 or Z41.1 approved) steel-toe footwear. Calendar Year Reimbursement AllowedBoots:â€¢   $400.00 annually: Large Machine, Plasma/Flame, Paint, Blast, Maintenance, Installation and Field Serviceâ€¢   $200.00 annually: All other departments ***Park does not reimburse for orthotics.Luggage: â€¢   $200.00 annually for Installers and Field Service only')]")
 	@CacheLookup
 	WebElement txtBLRFormPolicy;
 	
@@ -197,7 +197,7 @@ public class BootsAndLuggageReimbursementForm {
 	WebElement headerBoots;
 	
 	//Boots Policy 
-	@FindBy(xpath="(//div[contains(.,'•   $400.00 annually: Large Machine, Plasma/Flame, Paint, Blast, Maintenance, Installation and Field Service•   $200.00 annually: All other departments')])[23]")
+	@FindBy(xpath="(//div[contains(.,'â€¢   $400.00 annually: Large Machine, Plasma/Flame, Paint, Blast, Maintenance, Installation and Field Serviceâ€¢   $200.00 annually: All other departments')])[23]")
 	@CacheLookup
 	WebElement txtBoots;
 	
@@ -212,7 +212,7 @@ public class BootsAndLuggageReimbursementForm {
 	WebElement headerLuggage;
 	
 	//Luggage Policy 
-	@FindBy(xpath="//div[@data-block='MainFlow.BootsLuggageReimbursementPolicy'][contains(.,'Park Industries provides safety Personal Protective Equipment (PPE) to all associates as required by OSHA 1910 requirements. Shop associates, installers and field service associates must wear ANSI approved (OSHA Z41 or Z41.1 approved) steel-toe footwear. Calendar Year Reimbursement AllowedBoots:•   $400.00 annually: Large Machine, Plasma/Flame, Paint, Blast, Maintenance, Installation and Field Service•   $200.00 annually: All other departments ***Park does not reimburse for orthotics.Luggage: •   $200.00 annually for Installers and Field Service only')]")
+	@FindBy(xpath="//div[@data-block='MainFlow.BootsLuggageReimbursementPolicy'][contains(.,'Park Industries provides safety Personal Protective Equipment (PPE) to all associates as required by OSHA 1910 requirements. Shop associates, installers and field service associates must wear ANSI approved (OSHA Z41 or Z41.1 approved) steel-toe footwear. Calendar Year Reimbursement AllowedBoots:â€¢   $400.00 annually: Large Machine, Plasma/Flame, Paint, Blast, Maintenance, Installation and Field Serviceâ€¢   $200.00 annually: All other departments ***Park does not reimburse for orthotics.Luggage: â€¢   $200.00 annually for Installers and Field Service only')]")
 	@CacheLookup
 	WebElement txtLuggage;
 	
